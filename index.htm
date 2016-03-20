@@ -4,6 +4,7 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <link rel="stylesheet" type="text/css" href="main.css">
+        <script type='text/javascript' src='//gemdude46.github.io/libs/MBI.js' ></script>
         <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
         <title>Musical Code</title>
     <body>
@@ -17,5 +18,11 @@
         <div id=instructions onclick="location.href='instructions';" >
             <h1 class=buttonText >INSTRUCTIONS</h1>
         </div>
+        <script type='text/javascript' >
+            asyncGET('getcodelong',function(status, code){
+                if (status == 200) localStorage.setItem('uuid',code);
+                else alert('An error occurred. Please refresh the page.');
+            });
+        </script>
     </body>
 </html>

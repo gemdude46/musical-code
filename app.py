@@ -54,6 +54,13 @@ def getcode():
         code += random.choice('QWERTYUIOPASDFGHJKLZXCVBNM')
     return code
 
+@app.route('/getcodelong')
+def getcodelong():
+    code = ''
+    for i in range(6):
+        code += getcode()
+    return code
+
 @app.route('/getplayercount')
 def getplayercount():
     return '1'
