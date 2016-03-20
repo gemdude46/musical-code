@@ -52,13 +52,16 @@ def getcode():
     code = ''
     for i in range(6):
         code += random.choice('QWERTYUIOPASDFGHJKLZXCVBNM')
+    f = open('/root/games/playersfor_'+code,'w')
+    f.write(request.args['uuid'])
+    f.close()
     return code
 
 @app.route('/getcodelong')
 def getcodelong():
     code = ''
-    for i in range(6):
-        code += getcode()
+    for i in range(64):
+        code += random.choice('QWERTYUIOPASDFGHJKLZXCVBNM')
     return code
 
 @app.route('/getplayercount')
