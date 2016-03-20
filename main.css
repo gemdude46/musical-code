@@ -17,7 +17,7 @@ h1 {
     cursor: pointer;
 }
 
-#create:hover, #join:hover, #instructions:hover {
+#create:hover, #join:hover, #instructions:hover, #joinGame:hover {
     background-color: #020;
 }
 
