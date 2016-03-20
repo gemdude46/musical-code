@@ -1,3 +1,4 @@
 #!/bin/bash
 bash kill.sh
 bash run.sh
+echo Server Rebooted
