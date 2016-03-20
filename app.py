@@ -9,6 +9,10 @@ f = open('main.css','r')
 maincsspage = ' '.join(f.read().split())
 f.close()
 
+f = open('instructions.htm','r')
+instructionspage = ' '.join(f.read().split())
+f.close()
+
 class server(Flask):
     def __init__(self, *args, **kwargs):
         super(server, self).__init__(*args, **kwargs)
@@ -18,6 +22,10 @@ app = server(__name__)
 @app.route('/')
 def index():
     return indexpage
+
+@app.route('/instructions')
+def instructions():
+    return instructionspage
 
 @app.route('/main.css')
 def main_css():
