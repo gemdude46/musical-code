@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect, Response
-import os
+import os, random
 
 f = open('index.htm','r')
 indexpage = ' '.join(f.read().split())
