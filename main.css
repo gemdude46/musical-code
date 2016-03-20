@@ -8,5 +8,20 @@ h1 {
     text-align: center;
 }
 
+#create, #join {
+    position:absolute;
+    top: 20%;
+    width: 33%;
+    height: 60%;
+    border: 3px solid #0f0;
+}
+
+#create {
+    left: 11%;
+}
+
+#join {
+    left: 56%;
+}
 
 html,body{width:100%;height:100%;margin:0;position:absolute;top:0;left:0;}
