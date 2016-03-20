@@ -13,6 +13,18 @@ f = open('instructions.htm','r')
 instructionspage = ' '.join(f.read().split())
 f.close()
 
+f = open('create.htm','r')
+createpage = ' '.join(f.read().split())
+f.close()
+
+f = open('join.htm','r')
+joinpage = ' '.join(f.read().split())
+f.close()
+
+f = open('instructions.htm','r')
+instructionspage = ' '.join(f.read().split())
+f.close()
+
 class server(Flask):
     def __init__(self, *args, **kwargs):
         super(server, self).__init__(*args, **kwargs)
@@ -26,6 +38,15 @@ def index():
 @app.route('/instructions')
 def instructions():
     return instructionspage
+
+@app.route('/create')
+def create():
+    return createpage
+
+@app.route('/join')
+def join():
+    return joinpage
+
 
 @app.route('/main.css')
 def main_css():
