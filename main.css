@@ -4,7 +4,12 @@ body {
     background-color: rgb(0,0,0); 
     font-family: 'Share Tech Mono';
 }
+
 h1 {
+    text-align: center;
+}
+
+h3 {
     text-align: center;
 }
 
