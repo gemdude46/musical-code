@@ -2,7 +2,7 @@ from flask import Flask, request, redirect
 import os
 
 f = open('index.htm','r')
-indexpage = f.read()
+indexpage = ' '.join(f.read().split())
 f.close()
 
 
