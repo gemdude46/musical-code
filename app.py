@@ -21,7 +21,7 @@ def index():
 
 @app.route('/main.css')
 def main_css():
-    return Response(maincsspage,'text/css')
+    return Response(maincsspage, mimetype='text/css')
 
 @app.route('/reboot')
 def reboot():
