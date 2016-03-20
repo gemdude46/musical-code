@@ -12,7 +12,7 @@
         <h3 id=code ></h3>
         <script type='text/javascript' >
             asyncGET('getcode',function(status, code){
-                window.gamecode = code
+                window.gamecode = code;
                 if (status == 200) document.getElementById('code').innerHTML = 'Give this code to the other players: ' + code;
                 else alert('An error occurred. Please refresh the page.');
                 setTimeout(reqplayerdat,0);
