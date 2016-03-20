@@ -47,6 +47,12 @@ def create():
 def join():
     return joinpage
 
+@app.route('/favicon.ico')
+def favicon():
+    f = open('favicon.ico','rb')
+    c = f.read()
+    f.close()
+    return Response(c, mimetype='image/x-icon')
 
 @app.route('/main.css')
 def main_css():
