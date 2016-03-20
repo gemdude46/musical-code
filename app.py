@@ -47,6 +47,13 @@ def create():
 def join():
     return joinpage
 
+@app.route('/getcode')
+def getcode():
+    code = ''
+    for i in range(6):
+        code += random.choice('QWERTYUIOPASDFGHJKLZXCVBNM')
+    return code
+
 @app.route('/favicon.ico')
 def favicon():
     f = open('favicon.ico','rb')
