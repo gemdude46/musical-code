@@ -12,9 +12,20 @@
         <h3 id=code ></h3>
         <script type='text/javascript' >
             asyncGET('getcode',function(status, code){
+                window.gamecode = code
                 if (status == 200) document.getElementById('code').innerHTML = 'Give this code to the other players: ' + code;
                 else alert('An error occurred. Please refresh the page.');
+                setTimeout(reqplayerdat,0);
             });
+        </script>
+        <h2 id=pm ></h2>
+        <script type='text/javascript' >
+            function reqplayerdat(){
+                asyncGET('getplayercount?c='+gamecode,function(status, count){
+                    if (status == 200) document.getElementById('pm').innerHTML = 'Currently ' + count + ' player(s) connected.';
+                    setTimeout(reqplayerdat,1000);
+                });
+            }
         </script>
     </body>
 </html>

@@ -54,6 +54,10 @@ def getcode():
         code += random.choice('QWERTYUIOPASDFGHJKLZXCVBNM')
     return code
 
+@app.route('/getplayercount')
+def getplayercount():
+    return '1'
+
 @app.route('/favicon.ico')
 def favicon():
     f = open('favicon.ico','rb')
